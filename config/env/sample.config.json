@@ -1,0 +1,22 @@
+{
+    "mongo_instances": {
+        "primary_1": {
+            "connect": false,
+            "db": "skillg",
+            "host": "localhost",
+            "user": "",
+            "pass": "",
+            "options": ""
+        }
+    },
+    "application": {
+        "port": 401
+    },
+    "jwt": {
+        "secretKey": "justanrandomnumberasjfsthingads@ksnskf"
+    },
+    "admin" : {
+        "email" : "skillg@gmail.com",
+        "password" : "skillg@2000"
+    }
+}
