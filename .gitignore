@@ -88,3 +88,6 @@ coverage/
 # Specific to Koa.js or additional tools
 sessions/
 uploads/
+
+# development
+config/env/development.config.json

@@ -2,30 +2,32 @@ const {Schema} = require("mongoose");
 
 
 const schema = new Schema ({
-    _id : Schema.Types.ObjectId,
     name : {
         type : String,
         required : true
     },
     email : {
         type : String,
-        required : true
+        unique : true
     },
-    phoneNumber : {
+    phone : {
         type : String,
         required : true,
         unique : true
+    },
+    age : {
+        type : Number,
+        required : true
+    },
+    grade : {
+        type : Number,
+        required : true
     },
     status : {
         type : String,
         required : true,
         enum : ["active" , "disable"],
         default : "active"
-    },
-    password : {
-        type : String,
-        required : true,
-        bcrypt : true
     }
 }, {
     collection : "users",
@@ -34,7 +36,7 @@ const schema = new Schema ({
         updatedAt : "modified"
     },
     autoCreate : false,
-    versionKey : false
+    versionKey  : false
 })
 
 

@@ -9,13 +9,13 @@ class Client {
     }
 
     connect() {
-        let connString = `mongodb://${this.config.host}/${this.config.db}?${this.config.options}`;
-        if (_.size(this.config.user) && _.size(this.config.pass)) {
-            connString = `mongodb://${this.config.user}:${this.config.pass}@${this.config.host}/${this.config.db}?${this.config.options}`;
-        }
-        if (_.size(this.options) == 0) {
-            this.options = {}
-        };
+        let connString = this.config.uri;
+        // if (_.size(this.config.user) && _.size(this.config.pass)) {
+        //     connString = `mongodb://${this.config.user}:${this.config.pass}@${this.config.host}/${this.config.db}?${this.config.options}`;
+        // }
+        // if (_.size(this.options) == 0) {
+        //     this.options = {}
+        // };
         console.log("Mongoose Connection is created...");
         return mongoose.createConnection(connString, this.options);
     }
