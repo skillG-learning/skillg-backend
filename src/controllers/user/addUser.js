@@ -11,7 +11,7 @@ class AddUser extends Base {
 
 
     async add() {
-        const {name , email , phone , age , grade , status} = this.ctx.request.body;
+        const {name , email , phone , age , grade} = this.ctx.request.body;
         // const {value , error} = Validation.User.User.joiValidationSchema.validate(this.ctx.request.body);
         // if (error) {
         //     console.log(error);
@@ -25,7 +25,7 @@ class AddUser extends Base {
                 phone,
                 age,
                 grade,
-                status
+                status : "active"
             });
             await newUser.save();
             this.ctx.body = {
