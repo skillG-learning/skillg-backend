@@ -38,7 +38,7 @@ require('koa-qs')(app, 'extended');
 // cors moddleware...
 app.use(async (ctx, next) => {
     try {
-        const allowedOrigins = ['*'];
+        const allowedOrigins = ['https://skillg-frontend.onrender.com'];
         const origin = ctx.request.header.origin;
 
         if (allowedOrigins.includes(origin)) {
