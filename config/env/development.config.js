@@ -2,11 +2,11 @@ const config = {
     "mongo_instances": {
         "primary_1": {
             "connect": true,
-            "db": "skillg",
-            "host": "skillg.ly2z6.mongodb.net",
-            "user": "skillg",
-            "pass": "skillg1234",
-            "options": "?retryWrites=true&w=majority&appName=skillg",
+            "db": "",
+            "host": "",
+            "user": "",
+            "pass": "",
+            "options": "",
             "uri":process.env.MONGODB_URI
         }
     },
