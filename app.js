@@ -1,15 +1,13 @@
 const _ = require('lodash');
 const Koa = require('koa');
 const { koaBody } = require('koa-body');
-const env = process.env.NODE_ENV || 'development';
 const Utilities = require('./src/utilities');
 const dotenv = require('dotenv');
 dotenv.config();
 
 // requirinng config files...
-const config = require(`./config/env/${env}.config.js`);
+const config = require(`./config/env/development.config.js`);
 Utilities.Registry._set("config", config);
-Utilities.Registry._set("env", env);
 
 
 // creating mongo connection..
