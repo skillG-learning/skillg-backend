@@ -33,7 +33,6 @@ jspm_packages/
 
 # dotenv environment variable files
 .env
-.env.*.local
 
 # Next.js build output
 .next
@@ -89,5 +88,3 @@ coverage/
 sessions/
 uploads/
 
-# development
-config/env/development.config.json
